@@ -3,6 +3,8 @@ package org.stringtree.db;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.sql.SQLFeatureNotSupportedException;
+import java.util.logging.Logger;
 
 import javax.sql.DataSource;
 
@@ -64,5 +66,11 @@ public class PooledDataSource extends Delegator implements DataSource {
 	@Override
 	public <T> T unwrap(Class<T> iface) throws SQLException {
 		return realDataSource().unwrap(iface);
+	}
+
+	@Override public Logger getParentLogger()
+			throws SQLFeatureNotSupportedException {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

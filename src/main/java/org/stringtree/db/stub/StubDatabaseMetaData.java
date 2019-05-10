@@ -703,4 +703,15 @@ public class StubDatabaseMetaData implements DatabaseMetaData {
 	@Override public ResultSet getFunctionColumns(String catalog, String schemaPattern, String functionNamePattern, String columnNamePattern) throws SQLException {
 		return null;
 	}
+
+	@Override public boolean generatedKeyAlwaysReturned() throws SQLException {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override public ResultSet getPseudoColumns(String arg0, String arg1,
+			String arg2, String arg3) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
